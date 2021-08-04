@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>狗贼大队官方网站</title>
+    <link rel="stylesheet" href="../statics/gzindex.css">
+  </head>
+  <body>
+    <div class=pageback>
+    <a href="../index.html"><div class="link">返回班级主页</div></a>
+    </div>
+    <div class=pagehead>狗贼大队</div>
+    <div class=pagebody>
+      <div class=body-nav>
+        <div class=body-nav-head>蕉♂君指路</div>
+        <div class=body-nav-subhead>狗哲联盟编年史系列</div>
+        <div class="body-nav-body">
+        <a href="gz/doghistory0.html"><div class="body-nav-body-link" id=1>狗哲联盟编年史·序章</div></a>
+        <a href="gz/doghistory1.html"><div class="body-nav-body-link" id=2>狗哲联盟编年史（一）</div></a>
+        <a href="gz/doghistory2.html"><div class="body-nav-body-link" id=3>狗哲联盟编年史（二）</div></a>
+        <a href="gz/doghistory3.html"><div class="body-nav-body-link" id=4>狗哲联盟编年史（三）</div></a>
+        <a href="gz/dogexhibit.html"><div class="body-nav-body-link" id=5>史图馆</div></a>
+        </div>
+      </div>
+      <div class=body-body>
+        <div class=body-body-display id=display>
+        </div>
+        <script>
+          var p1 = document.getElementById('1');
+          var p2 = document.getElementById('2');
+          var p3 = document.getElementById('3');
+          var p4 = document.getElementById('4');
+          var p5 = document.getElementById('5');
+          
+          var display = document.getElementById('display');
+          
+          function displayclear() {
+              display.style.width = "20px"
+              display.style.color = "rgba(0, 0, 0, 0)";
+              display.style.borderColor = "rgba(0, 0, 0, 0)";
+              display.style.backgroundColor = "rgba(0, 0, 0, 0)" ;
+              display.style.height = "50px";
+          }
+
+          function displayshow(txt) {
+              function  tmp(){
+                  display.style.width = "800px";
+                  display.style.color = "gray";
+                  display.style.borderColor = "black";
+                  display.style.backgroundColor = "lightgray";
+                  display.innerHTML = txt;
+                  display.style.height = '300px';
+              }
+              return tmp;
+          }
+
+          p1.addEventListener('mouseover', displayshow('2020年8月，来自南通各大初中的优秀应届狗贼汇聚通中高一（19）……'))
+          p1.addEventListener('mouseout', displayclear)
+          p2.addEventListener('mouseover', displayshow('狗贼大队第一次全体会议召开后，全体成员奋力抗击辉煌集团。辉煌集团因狗贼大队的强烈抵制，加之班主任的不认可不信任，逐渐没落，狗贼大队进而初步确立地位……'))
+          p2.addEventListener('mouseout', displayclear)
+          p3.addEventListener('mouseover', displayshow('11月16日，yge上任高一（19）班的物理课代表，屡次违背班级绝大多数同学的意愿，强制加课，加作业。不仅如此，还多次将班级日常情况，同学个人隐私，以及狗哲联盟相关事项告诉班主任，激起了全班同学的愤怒。班主任在得知狗哲联盟后并未反对，而是表示如果狗哲联盟传播正能量，自己不会过多干涉。这鼓励了狗哲联盟全体成员，使得狗哲联盟得以正当存在……'))
+          p3.addEventListener('mouseout', displayclear)
+          p4.addEventListener('mouseover', displayshow('狗哲联盟一直以来存在个别成员有叛变倾向，狗哲联盟以救病治人的态度进行感化，一部分成员悬崖勒马，但还是有无药可救者……'))
+          p4.addEventListener('mouseout', displayclear)
+          p5.addEventListener('mouseover', displayshow('第一手史料加史实解说，精确快速深刻地了解狗贼大队的光辉历史'))
+          p5.addEventListener('mouseout', displayclear)
+      </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,96 +1,62 @@
 <html>
     <head>
         <title>南通中学19班</title>
-        <style>
-            @keyframes button_color{
-                0% {background-color: white;}
-                20% {background-color: lightgoldenrodyellow}
-                40% {background-color: rgb(255, 243, 175)}
-                60% {background-color: rgb(250, 231, 127)}
-                80% {background-color: rgb(246, 221, 81)}
-                100% {background-color: gold}}
-
-            div.link:hover {
-            animation: button_color;
-            animation-duration: 0.2s;
-            background-color: gold;
-            font-family: STSong;}
-            
-            div.link {
-            width: 100px;
-            font-size:20px;
-            word-wrap: break-word;
-            text-align:center;
-            font-family: STSong;
-            min-height: 30px;}
-            a {text-decoration: none;
-            color:inherit}
-            
-            body {background-color: lightgoldenrodyellow}
-            
-            @keyframes bold{
-                100% {font-weight: bold; color: tomato;}
-            }
-            
-            h1 {font-family: STSong;
-            font-weight: normal;
-            text-align: center;}
-            
-            h2, h3 {font-family: STSong;
-            font-weight: normal;}
-            
-            p {font-family: STSong;}
-            
-            h1:hover {animation: bold;
-            animation-duration: 0.2s;
-            font-weight: bold;
-            color:tomato}
-        
-            h2:hover, h3:hover {animation: bold;
-            animation-duration: 0.2s;
-            font-weight: bold;
-            color:tomato}
-        
-            div.container {border: 1px solid;
-            border-color: orange;
-            max-width: 100px;
-            height: 500px;
-            display:inline-block;}
-    
-            @keyframes shiver{
-            0% {left: 0px; top: 0px;}
-            10% {left: 5px; top: 3px;}
-            20% {left: -2px; top: 6px;}
-            30% {left: 5px; top: -4px;}
-            40% {left: 2px; top: 7px;}
-            50% {left: 1px; top: -1px;}
-            60% {left: -5px; top: 6px;}
-            70% {left: 3px; top: 2px;}
-            80% {left: 0px; top: -1px;}
-            90% {left: -2px; top: 5px;}
-            100% {left: 0px; top: 0px;}
-            }
-
-            div.noti {animation: shiver;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-            color:red;
-            position: relative;}
-        </style>
+        <link rel="stylesheet" href="statics/index.css">
+        <script src="statics/index.js"></script>
     </head>
     <body>
-        <h1>南通中学19班 - 主页</h1>
-        <div class="noti"><p align="center">首页改版！</p></div>
-        <hr />
-        <h2>王♂的指引</h2>
-        <div class="container">
-            <a href="website/pagephilomain.html"><div class="link">哲♂教</div></a>
-            <a href="website/pageglorymain.html" target="_self"><div class="link">辉煌公司</div></a>
-            <a href="website/pagedogmain.html" target="_self"><div class="link">狗贼大队</div></a>
-            <p>待续... ...</p>
+        <div class=pagehead>南通中学19班 <span class="span1">Class Nineteen From NTZX</span></div>
+        <div class=liminal>In the fog, what's buried is a shard of history, lost in the howling tides, lying beneath the darkness of the sea of time.</div>
+        <div class=pagebody>
+            <div class=body-nav>
+                <div class=body-nav-head>王♂的指引</div>
+                <div class=body-nav-subhead>The Navigation</div>
+                <div class="body-nav-body">
+                    <div class="body-nav-body-link" id="zj"><a href="website/pagephilomain.html" target="_self">哲♂教</a></div>
+                    <div class="body-nav-body-link" id="hh"><a href="website/pageglorymain.html" target="_self">辉煌公司</a></div>
+                    <div class="body-nav-body-link" id="gz"><a href="website/gzindex.html" target="_self">狗贼大队</a></div>
+                </div>
+            </div>
+            <div class=body-body>
+                <div class=body-body-display id=display>
+                </div>
+                <script>
+                    var philo = document.getElementById('zj');
+                    var gzteam = document.getElementById('gz');
+                    var glory = document.getElementById('hh');
+                    
+                    var display = document.getElementById('display');
+                    
+                    function displayclear() {
+                        display.style.width = "20px"
+                        display.style.color = "rgba(0, 0, 0, 0)";
+                        display.style.borderColor = "rgba(0, 0, 0, 0)";
+                        display.style.backgroundColor = "rgba(0, 0, 0, 0)" ;
+                        display.style.height = "50px";
+                    }
+
+                    function displayshow(txt) {
+                        function  tmp(){
+                            display.style.width = "800px";
+                            display.style.color = "gray";
+                            display.style.borderColor = "black";
+                            display.style.backgroundColor = "lightgray";
+                            display.innerHTML = txt;
+                            display.style.height = '200px';
+                        }
+                        return tmp;
+                    }
+
+                    philo.addEventListener('mouseover', displayshow('暂无简介'))
+                    philo.addEventListener('mouseout', displayclear)
+                    gzteam.addEventListener('mouseover', displayshow('狗贼大队是一个创立于10月中旬的通中地下组织，目前与哲教，辉煌集团，保国堂联盟。组织的宗旨是维护班级、校园和谐，传播狗贼文化，哲学精神。狗贼大队乐意与一切友好组织合作！'))
+                    gzteam.addEventListener('mouseout', displayclear)
+                    glory.addEventListener('mouseover', displayshow('暂无简介'))
+                    glory.addEventListener('mouseout', displayclear)
+                </script>
+            </div>
+            <div class=body-main>
+            </div>
         </div>
-        <p><h2>告示</h2></p>
-        <p>首页今日改版 ———— 技术支持 2021.6.29 5:44 p.m.</p>
-        <a href="old_index.html"><div class="link">老版首页</div></a>
     </body>
 </html>

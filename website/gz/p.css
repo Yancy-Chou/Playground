@@ -1,0 +1,95 @@
+* {
+    font-family: 'Baskerville';
+}
+
+body {
+    display: grid;
+    background-color: lightgray;
+}
+
+.pagehead {
+    grid-row: 1/2;
+    display: grid;
+    font-size: 40px;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pr {
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.pagebody {
+    grid-row: 2/3;
+    display: grid;
+}
+
+.pagebutt {
+    grid-row: 3/4;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next {
+    font-size: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    transition: padding 0.5s, font-size 0.5s;
+}
+
+.next:hover {
+    padding: 10px;
+    font-size: 35px;
+    transition: padding 1s, font-size 1s;
+}
+
+.back {
+    font-size: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: padding 0.5s, font-size 0.5s;
+}
+
+.back:hover {
+    padding: 10px;
+    font-size: 35px;
+    transition: padding 1s, font-size 1s;
+}
+
+.prev {
+    font-size: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    transition: padding 0.5s, font-size 0.5s;
+}
+
+.prev:hover {
+    padding: 10px;
+    font-size: 35px;
+    transition: padding 1s, font-size 1s;
+}
