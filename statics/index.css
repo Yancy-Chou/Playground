@@ -4,7 +4,7 @@
 
 body {
     display: grid;
-    background-image: url(https://yancy-chou.github.io/class19/statics/images/fog.png);
+    background-color: lightgray;
 }
 
 .span1 {
