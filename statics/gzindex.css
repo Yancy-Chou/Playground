@@ -4,7 +4,7 @@
 
 body {
     display: grid;
-    background-image: url(../statics/images/paper.PNG)
+    background-image: url(../statics/images/paper.png);
 }
 
 .span1 {
